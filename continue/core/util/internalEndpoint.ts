@@ -6,7 +6,10 @@
 // In production this becomes the internal inference endpoint
 // (vLLM / TGI / LiteLLM cluster). The host just has to stay inside
 // INTERNAL_ALLOWED_HOSTS.
-export const INTERNAL_LLM_URL = "http://127.0.0.1:8080/v1";
+// Trailing slash matters. new URL("chat/completions", base) drops the last
+// path segment of base unless it ends in "/" — without the slash the plugin
+// would hit http://127.0.0.1:8080/chat/completions (404 HTML) instead of /v1/…
+export const INTERNAL_LLM_URL = "http://127.0.0.1:8080/v1/";
 
 export const INTERNAL_ALLOWED_HOSTS: ReadonlySet<string> = new Set([
   "127.0.0.1",
