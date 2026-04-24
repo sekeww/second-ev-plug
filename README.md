@@ -86,6 +86,7 @@ npm install
 node scripts/build-packages.js
 (cd core && PUPPETEER_SKIP_DOWNLOAD=true npm install && npm link)
 (cd gui  && npm install && npm link @continuedev/core && npx vite build)
+mkdir -p extensions/intellij/src/main/resources/webview
 cp -r gui/dist/* extensions/intellij/src/main/resources/webview/
 (cd extensions/vscode && npm install)        # shared helper for binary build
 (cd binary && npm install && npm run build)
