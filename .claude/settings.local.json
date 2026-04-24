@@ -1,0 +1,37 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(chmod +x *)",
+      "Bash(docker compose *)",
+      "Bash(docker run *)",
+      "Bash(bash -n /Users/sekeww/Code/temp/second-ev-plug/scripts/observe-egress.sh)",
+      "Bash(DURATION=1 bash -c 'set -euo pipefail; source /dev/stdin <<< \"$\\(sed -n \"/^descendants_of/,/^}/p\" scripts/observe-egress.sh\\)\"; descendants_of $$')",
+      "Bash(command -v bun)",
+      "Bash(bun --version)",
+      "Bash(command -v node)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(npx vite *)",
+      "Bash(node ./scripts/build-packages.js)",
+      "Bash(PUPPETEER_SKIP_DOWNLOAD=true npm link --silent)",
+      "Bash(npm link *)",
+      "Bash(NODE_OPTIONS=\"--max-old-space-size=4096\" npx vite build)",
+      "Bash(./gradlew buildPlugin --no-daemon -q)",
+      "Bash(java -version)",
+      "Bash(/usr/libexec/java_home -V)",
+      "Bash(./gradlew buildPlugin --no-daemon --stacktrace)",
+      "Bash(rm -rf .gradle build)",
+      "Bash(./gradlew buildPlugin --no-configuration-cache --no-daemon --stacktrace)",
+      "Bash(./gradlew buildPlugin --no-configuration-cache --no-daemon)",
+      "Bash(command -v brew)",
+      "Bash(command -v sdk)",
+      "Bash(/opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home/bin/java -version)",
+      "Bash(export JAVA_HOME=/opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home)",
+      "Bash(./gradlew buildPlugin --no-daemon)",
+      "Bash(unzip -l /Users/sekeww/Code/temp/second-ev-plug/dist/continue-hardened-poc-1.0.68.zip)",
+      "Bash(./gradlew buildPlugin --rerun-tasks --no-configuration-cache --no-daemon)",
+      "Bash(unzip -p /Users/sekeww/Code/temp/second-ev-plug/dist/continue-hardened-poc-1.0.68.zip \"continue-intellij-extension/lib/continue-intellij-extension-1.0.68.jar\")",
+      "Bash(unzip -l /tmp/plugin.jar)"
+    ]
+  }
+}

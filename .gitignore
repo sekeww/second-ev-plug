@@ -1,0 +1,36 @@
+# Built plugin artifacts
+dist/
+
+# Node deps
+**/node_modules/
+
+# Build outputs
+continue/binary/bin/
+continue/binary/out/
+continue/binary/build/
+continue/binary/tree-sitter/
+continue/binary/tmp/
+continue/gui/dist/
+continue/extensions/intellij/build/
+continue/extensions/intellij/.gradle/
+continue/extensions/intellij/.idea/
+continue/extensions/vscode/dist/
+continue/extensions/vscode/node_modules.bak/
+continue/extensions/vscode/continue.build/
+continue/packages/*/dist/
+continue/core/**/*.tsbuildinfo
+
+# TypeScript incremental
+**/*.tsbuildinfo
+
+# Qodana
+continue/extensions/intellij/.qodana/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Egress observation runs
+/tmp/egress-observation.log
