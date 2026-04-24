@@ -14,6 +14,10 @@
 # — is a leak from the plugin or its bundled binary.
 set -euo pipefail
 
+# macOS' BSD sort/grep/awk error on non-UTF8 bytes under a UTF-8 locale;
+# lsof output can contain them. Force byte-mode for everything downstream.
+export LC_ALL=C
+
 DURATION="${DURATION:-30}"
 OUT="${OUT:-/tmp/egress-observation.log}"
 # Default: IntelliJ IDEA installed under /Applications. Override with
@@ -84,8 +88,7 @@ done
 # We want $1 (command) and the <remote> from the last column that contains "->".
 # Drop kernel hex sockets (->0x...) by requiring proper IP:port form.
 pairs_file=$(mktemp)
-# LC_ALL=C so macOS' BWK awk doesn't die on stray non-UTF8 bytes in lsof output.
-LC_ALL=C awk '
+awk '
   /ESTABLISHED/ {
     cmd = $1;
     for (i = 1; i <= NF; i++) {

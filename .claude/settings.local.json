@@ -31,7 +31,9 @@
       "Bash(unzip -l /Users/sekeww/Code/temp/second-ev-plug/dist/continue-hardened-poc-1.0.68.zip)",
       "Bash(./gradlew buildPlugin --rerun-tasks --no-configuration-cache --no-daemon)",
       "Bash(unzip -p /Users/sekeww/Code/temp/second-ev-plug/dist/continue-hardened-poc-1.0.68.zip \"continue-intellij-extension/lib/continue-intellij-extension-1.0.68.jar\")",
-      "Bash(unzip -l /tmp/plugin.jar)"
+      "Bash(unzip -l /tmp/plugin.jar)",
+      "Bash(git -c user.name=\"Askhat Sharipov\" -c user.email=\"ask1dub@gmail.com\" commit -q -am \"observe-egress: export LC_ALL=C at top \\(covers sort/grep too, not just awk\\)\")",
+      "Bash(git push *)"
     ]
   }
 }
