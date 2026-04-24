@@ -4,6 +4,14 @@ POC for securing the [Continue.dev](https://www.continue.dev/) JetBrains
 plugin so it cannot reach any external network — built iteratively in
 three stages, each with its own test report.
 
+## Deliverables (mapped to the assignment)
+
+| Asked | Delivered |
+|-------|-----------|
+| **Source code** | [`continue/`](./continue/) — fork of [continuedev/continue](https://github.com/continuedev/continue) with Stages 1–3 patches applied. Key patched files: [`core/util/internalEndpoint.ts`](./continue/core/util/internalEndpoint.ts), [`core/llm/llms/OpenAI.ts`](./continue/core/llm/llms/OpenAI.ts), [`packages/fetch/src/fetch.ts`](./continue/packages/fetch/src/fetch.ts), [`core/control-plane/env.ts`](./continue/core/control-plane/env.ts). |
+| **Test report** | [`STAGE1-REPORT.md`](./STAGE1-REPORT.md) · [`STAGE2-REPORT.md`](./STAGE2-REPORT.md) · [`STAGE3-REPORT.md`](./STAGE3-REPORT.md). Each contains objective, method, receipts (egress observations, static URL scans, reconfiguration tests), and what's deferred. Supporting decision logs: [`STAGE2-PATCHES.md`](./STAGE2-PATCHES.md) · [`STAGE3-PATCHES.md`](./STAGE3-PATCHES.md). |
+| **Installable plugin** | Prebuilt `.zip` attached to the [v1.0.68-internal release](../../releases/tag/v1.0.68-internal) (≈380 MB, bundles all 5 target platforms). Or build from source — see *Quick start* below. |
+
 ## TL;DR
 
 A modified Continue plugin that:
